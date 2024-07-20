@@ -74,6 +74,7 @@ class SegmentTree():
 class ReplayMemory():
   def __init__(self, args, capacity):
     self.device = args.device
+    print(args.device)
     self.capacity = capacity
     self.history = args.history_length
     self.discount = args.discount
