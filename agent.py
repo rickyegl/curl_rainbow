@@ -27,6 +27,7 @@ class Agent():
     self.atoms = args.atoms
     self.Vmin = args.V_min
     self.Vmax = args.V_max
+    print(args.device)
     self.support = torch.linspace(args.V_min, args.V_max, self.atoms).to(device=args.device)  # Support (range) of z
     self.delta_z = (args.V_max - args.V_min) / (self.atoms - 1)
     self.batch_size = args.batch_size
