@@ -81,6 +81,12 @@ class DQN(nn.Module):
     self.b_c = nn.Parameter(torch.zeros(128))
     self.W = nn.Parameter(torch.rand(128, 128))
 
+    print(self.W_h.device)
+    print(self.W_c.device)
+    print(self.b_h.device)
+    print(self.b_c.device)
+    print(self.W.device)
+
   def forward(self, x, log=False):
     x = self.convs(x)
     x = x.view(-1, self.conv_output_size)
