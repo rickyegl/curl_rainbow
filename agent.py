@@ -36,6 +36,7 @@ class Agent():
     self.norm_clip = args.norm_clip
     self.coeff = 0.01 if args.game in ['pong', 'boxing', 'private_eye', 'freeway'] else 1.
 
+    print("dqn"+args.device)
     self.online_net = DQN(args, self.action_space).to(device=args.device)
     self.momentum_net = DQN(args, self.action_space).to(device=args.device)
     if args.model:  # Load pretrained model if provided
