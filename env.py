@@ -17,6 +17,7 @@ import torch
 class Env():
   def __init__(self, args):
     self.device = args.device
+    print(args.device)
     self.ale = atari_py.ALEInterface()
     self.ale.setInt('random_seed', args.seed)
     self.ale.setInt('max_num_frames_per_episode', args.max_episode_length)
